@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mandelbrot</title>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css" />
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container-fluid">
+			<h1>Mandelbrot (<a href="http://en.wikipedia.org/wiki/Mandelbrot_set" target="_blank">wikipedia</a>)</h1>
+			<p>
+				A simple visual repressentation of the Mandelbrot set, based on a given number of iterations on the following complex sequence:
+				<b>z<sub>n</sub>+1=z<sub>n</sub><sup>2</sup>+c</b>
+			</p>
+			<hr />
+			<div class="col-sm-12">
+				<div class="col-sm-12 form-inline text-center">
+					<label for="max" class="form-label">Number of iterations:</label>
+					<input type="number" id="max" value="50" class="form-control" autofocus/>
+					<button class="btn btn-primary" id="regenerate">
+					<i class="glyphicon glyphicon-repeat"></i>
+					Regenerate
+					</button>
+				</div>
+				<div class="col-sm-12 text-center">
+					<canvas id="canvas" width="800" height="600">
+					</canvas>
+				</div>
+			</div>
+		</div>
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="mandelbrot.js"></script>
+	</body>
+</html>
