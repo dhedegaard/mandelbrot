@@ -19,6 +19,7 @@
 		$input.attr('disabled', 'disabled');
 		$button.attr('disabled', 'disabled');
 		$button_text.text('Generating...');
+		$('i', $button).addClass('fa-spin');
 		setTimeout(function() {
 			if (max === undefined) {
 				alert('The number of iterations is not a number!');
@@ -67,6 +68,7 @@
 			$input.removeAttr('disabled');
 			$button.removeAttr('disabled');
 			$button_text.text('Regenerate');
+			$('i', $button).removeClass('fa-spin');
 		}, 100);
 	};
 
